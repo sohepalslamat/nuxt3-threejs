@@ -44,9 +44,11 @@ import { gsap } from "gsap";
       scene.add(text)
     })
     const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
-    
+    const material = new THREE.MeshStandardMaterial()
+    material.roughness = 0.4
+
     for (let i = 0; i < 100; i++) {
-      const donut = new THREE.Mesh(donutGeometry, ourMaterial)
+      const donut = new THREE.Mesh(donutGeometry, material)
       donut.position.x = (Math.random() - 0.5) * 10
       donut.position.y = (Math.random() - 0.5) * 10
       donut.position.z = (Math.random() - 0.5) * 10
@@ -60,6 +62,13 @@ import { gsap } from "gsap";
 
       scene.add(donut)
     }
+
+    ///
+
+    // light 
+
+    const pointLight = new THREE.PointLight(0xff9000, 1.5)
+    scene.add(pointLight)
 
     ///
 

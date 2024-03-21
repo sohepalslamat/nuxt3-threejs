@@ -6,6 +6,7 @@
 <script setup lang="ts">
     import * as THREE from "three";
     import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+    import texture9 from '~~/assets/textures/matcaps/9.png'
 
     onMounted(() => {
         // Canvas
@@ -33,7 +34,7 @@
         plane.position.y = - 0.5
 
         const textureLoader = new THREE.TextureLoader()
-        const matcapTexture = textureLoader.load('textures/matcaps/9.png')
+        const matcapTexture = textureLoader.load(texture9)
         const sphereMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
                 
         const sphere = new THREE.Mesh(
@@ -42,13 +43,6 @@
         )
         sphere.castShadow = true
         scene.add(plane,sphere)
-
-
-
-
-
-
-
 
         // Sizes
         const sizes = {
@@ -102,7 +96,7 @@
 
         const clock = new THREE.Clock()
 
-        const x = () => {
+        const tick = () => {
             const elapsedTime = clock.getElapsedTime()
             // sphere.position.x = Math.sin(elapsedTime * Math.PI*0.5) 
             // sphere.position.z = Math.cos(elapsedTime * Math.PI *0.5)
@@ -111,9 +105,9 @@
 
             controls.update();
             renderer.render(scene, camera);
-            window.requestAnimationFrame(x);
+            window.requestAnimationFrame(tick);
         };
-        x();
+        tick();
     });
 </script>
 <style>

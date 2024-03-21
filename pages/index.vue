@@ -9,6 +9,7 @@
     import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
     import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
     // import { gsap } from "gsap";
+    import texture4 from '~~/assets/textures/matcaps/4.png'
 
     onMounted(() => {
         // Canvas
@@ -17,7 +18,7 @@
         const scene = new THREE.Scene();
 
         const textureLoader = new THREE.TextureLoader()
-        const matcapTexture = textureLoader.load('textures/matcaps/4.png')
+        const matcapTexture = textureLoader.load(texture4)
         const ourMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 
 

@@ -1,9 +1,9 @@
 <template>
   <header>
     <NuxtLink to="/" :active-class="'active'">Home</NuxtLink>
-    <NuxtLink to="/galaxy" :active-class="'active'">Galaxy</NuxtLink>
-    <NuxtLink to="/font" :active-class="'active'">Font</NuxtLink>
-    <NuxtLink to="/basketball" :active-class="'active'">Basketball</NuxtLink>
+    <NuxtLink to="/galaxy/" :active-class="'active'">Galaxy</NuxtLink>
+    <NuxtLink to="/font/" :active-class="'active'">Font</NuxtLink>
+    <NuxtLink to="/basketball/" :active-class="'active'">Basketball</NuxtLink>
   </header>
   <NuxtPage />
 </template>

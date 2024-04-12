@@ -23,7 +23,7 @@
 
 
         const fontLoader = new FontLoader()
-        fontLoader.load('fonts/Englebert_Regular.json', (font) => {
+        fontLoader.load('/nuxt3-threejs/fonts/Englebert_Regular.json', (font) => {
             const textGeometry = new TextGeometry(
                 'Sohaib Alslamat',
                 {
@@ -151,10 +151,5 @@
     });
 </script>
 <style>
-    .webgl {
-        position: fixed;
-        top: 0;
-        left: 0;
-        outline: none;
-    }
+    
 </style>

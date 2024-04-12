@@ -8,23 +8,31 @@
   <NuxtPage />
 </template>
 <script setup lang="ts">
-  
+
 </script>
 <style>
-header {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  gap: 10px;
-  padding: 4px;
-}
-header a {
-  text-decoration: none;
+  .webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+  }
+
+  header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    padding: 4px;
+  }
+
+  header a {
+    text-decoration: none;
     color: white;
     font-size: larger;
-}
-.active {
-  color: aquamarine;
-}
-</style>
+  }
 
+  .active {
+    color: aquamarine;
+  }
+</style>

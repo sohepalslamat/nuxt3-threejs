@@ -98,7 +98,7 @@ import * as THREE from "three";
              */
             const points = new THREE.Points(geometry, material)
             scene.add(points)
-            gsap.to(points.rotation, { rotation: 1, y: 20, duration: 120})
+            gsap.to(points.rotation, { rotation: 1, y: 10, duration: 120})
         }
 
         generateGalaxy()
